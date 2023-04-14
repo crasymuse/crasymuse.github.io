@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url('https://source.unsplash.com/random/1920x1080?nature');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(30px);
+    padding: 40px 50px 40px 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto; 
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+h2 {
+    font-size: 1rem;
+    font-weight: 300;
+    color: #777;
+    margin-bottom: 30px;
+}
+
+table {
+    width: 100%;
+    max-width: 290px;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+.label {
+    color: #848484;
+    padding: 5px 10px;
+    text-align: right;
+}
+
+.value {
+    padding: 5px 10px;
+    text-align: center;
+}
+
+a {
+    color: #054671;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.language-switcher {
+    position: absolute;
+    top: 19px;
+    right: 19px;
+    font-size: 0.8rem;
+}
+
+.language-switcher a {
+    font-weight: 400;
+    margin: 0 3px;
+}
+
+.language-switcher a.active {
+    text-decoration: underline;
+}
+
+/* Медиа-запрос для мобильных устройств */
+@media screen and (max-width: 767px) {
+    .container {
+        padding: 40px 50px 40px 50px;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+}
