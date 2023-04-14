@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <title>Anna Petrova</title>
+    <script>
+        function switchLanguage(lang) {
+            document.querySelectorAll('.lang').forEach(function (el) {
+                el.style.display = el.classList.contains('lang-' + lang) ? 'block' : 'none';
+            });
+            document.querySelectorAll('.language-switcher a').forEach(function (el) {
+                el.classList[el.getAttribute('data-lang') === lang ? 'add' : 'remove']('active');
+            });
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="language-switcher">
+            <a href="javascript:void(0);" data-lang="ru" class="active" onclick="switchLanguage('ru')">RU</a>
+            <span>|</span>
+            <a href="javascript:void(0);" data-lang="en" onclick="switchLanguage('en')">EN</a>
+        </div>
+        <h1 class="lang lang-ru">Анна Петрова</h1>
+        <h1 class="lang lang-en" style="display:none;">Anna Petrova</h1>
+        <h2 class="lang lang-ru">инженер-технолог / промышленный дизайнер</h2>
+        <h2 class="lang lang-en" style="display:none;">process engineer / industrial designer</h2>
+        <table>
+            <tr>
+                <td class="label lang lang-ru">почта</td>
+                <td class="label lang lang-en" style="display:none;">email</td>
+                <td class="value">
+                    <a href="mailto:anna@petrova.top">anna@petrova.top</a>
+                </td>
+            </tr>
+            <tr>
+                <td class="label lang lang-ru">телефон</td>
+                <td class="label lang lang-en" style="display:none;">phone</td>
+                <td class="value">
+                    <a href="tel:+79165011144">+79165011144</a>
+                </td>
+            </tr>
+            <tr>
+                <td class="label lang lang-ru">телеграм</td>
+                <td class="label lang lang-en" style="display:none;">telegram</td>
+                <td class="value">
+                    <a href="https://t.me/crasymuse">@crasymuse</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
